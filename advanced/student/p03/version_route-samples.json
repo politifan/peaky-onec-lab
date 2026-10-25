@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"messages\":[{\"key\":\"a\",\"version\":1},{\"key\":\"b\",\"version\":3}],\"routes\":{\"1\":\"old\",\"2\":\"new\"}}",
+    "output": "[{\"key\":\"a\",\"route\":\"old\"},{\"key\":\"b\",\"route\":\"reject\"}]"
+  },
+  {
+    "input": "{\"messages\":[],\"routes\":{}}",
+    "output": "[]"
+  }
+]

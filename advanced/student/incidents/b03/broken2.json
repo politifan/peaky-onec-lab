@@ -1,0 +1,15 @@
+{
+  "fields": [
+    "a",
+    "b"
+  ],
+  "saved": {
+    "fields": [
+      "old",
+      "b",
+      "a"
+    ],
+    "period": "day"
+  },
+  "target_version": 2
+}

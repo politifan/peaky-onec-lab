@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="86d883a2-ea8c-5334-ac9d-111b97f69a52">
+  <name>Товары</name>
+  <synonym>
+    <key>ru</key>
+    <value>Товары</value>
+  </synonym>
+  <producedTypes>
+    <objectType typeId="a2a18d39-a749-50fb-a46c-4ac7cf5dc937" valueTypeId="cddc944c-a133-5e53-a9a8-8ef2f979e8c1" />
+    <refType typeId="d953904e-aace-5cbd-b7ab-a6ce56cbef1b" valueTypeId="930ea154-48ca-5160-abd6-e70c5083f7b1" />
+    <selectionType typeId="054ba35d-4b38-521f-bc02-ba3198881c8f" valueTypeId="b0f49df3-626c-5381-b7c4-84940c5320f9" />
+    <listType typeId="3d848800-3b73-5498-a3d6-eb7f0933d40a" valueTypeId="a227bc2a-2343-5ed4-8dd1-57ac8530b308" />
+    <managerType typeId="7ee92ecd-1c73-5901-aaca-ed80da15b37f" valueTypeId="7b4a154f-9efd-5e8d-af7d-4a1201a3ee21" />
+  </producedTypes>
+  <useStandardCommands>true</useStandardCommands>
+  <descriptionLength>100</descriptionLength>
+  <codeLength>9</codeLength>
+  <codeType>String</codeType>
+  <autonumbering>true</autonumbering>
+  <checkUnique>true</checkUnique>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <attributes uuid="5cbfd127-b6a7-5ef2-9297-beead225beda">
+    <name>ВнешнийКод</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+</mdclass:Catalog>

@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"expected\":[\"a\",\"b\"],\"restored\":[\"a\",\"x\"]}",
+    "output": "{\"lost\":[\"b\"],\"unexpected\":[\"x\"]}"
+  },
+  {
+    "input": "{\"expected\":[],\"restored\":[]}",
+    "output": "{\"lost\":[],\"unexpected\":[]}"
+  }
+]

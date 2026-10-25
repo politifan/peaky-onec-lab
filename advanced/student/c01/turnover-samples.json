@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"end\":4,\"events\":[{\"delta\":3,\"t\":2},{\"delta\":-1,\"t\":3},{\"delta\":10,\"t\":4}],\"start\":2}",
+    "output": "{\"incoming\":3,\"outgoing\":1}"
+  },
+  {
+    "input": "{\"end\":0,\"events\":[],\"start\":0}",
+    "output": "{\"incoming\":0,\"outgoing\":0}"
+  }
+]

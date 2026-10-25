@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"events\":[{\"name\":\"a\",\"status\":\"passed\"},{\"name\":\"a\",\"status\":\"failed\"}],\"required\":[\"a\",\"b\"]}",
+    "output": "[\"a\",\"b\"]"
+  },
+  {
+    "input": "{\"events\":[],\"required\":[]}",
+    "output": "[]"
+  }
+]

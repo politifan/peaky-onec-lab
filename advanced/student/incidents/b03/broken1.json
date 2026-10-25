@@ -1,0 +1,13 @@
+{
+  "allowed": [
+    "s"
+  ],
+  "shown": [
+    {
+      "warehouse": "s"
+    },
+    {
+      "warehouse": "n"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4038b003-1992-5039-a4d3-9b56348ba300">
+  <name>Склады</name>
+  <synonym>
+    <key>ru</key>
+    <value>Склады</value>
+  </synonym>
+  <producedTypes>
+    <objectType typeId="873243c7-b39e-57e6-98cb-d1088585ad4a" valueTypeId="dc13cec5-6291-58b4-897c-3223898b06ab" />
+    <refType typeId="37a8902c-0c09-5b1c-867a-0ac01ee80524" valueTypeId="23375ee6-92fe-5af8-a285-8d9d764d0176" />
+    <selectionType typeId="9810dd09-4d1c-54f8-aa20-7a8e90ccaa01" valueTypeId="aa678945-bd61-5af9-a762-d4b99da54e7a" />
+    <listType typeId="01917a5e-89f6-5081-aaee-4968647d5391" valueTypeId="ea55859c-1640-5d67-8a17-ffaa090fc727" />
+    <managerType typeId="01e8b74f-a1f5-5e66-9a8e-4b572136b33a" valueTypeId="713e0c6e-8af8-5fc0-880b-9a3763bf399b" />
+  </producedTypes>
+  <useStandardCommands>true</useStandardCommands>
+  <descriptionLength>100</descriptionLength>
+  <codeLength>9</codeLength>
+  <codeType>String</codeType>
+  <autonumbering>true</autonumbering>
+  <checkUnique>true</checkUnique>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <attributes uuid="5469145e-647a-5ee5-9359-6297493f9f9b">
+    <name>Приоритет</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <scale>0</scale>
+      </numberQualifiers>
+    </type>
+  </attributes>
+</mdclass:Catalog>

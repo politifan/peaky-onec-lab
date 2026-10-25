@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="aa450f11-08ec-5dfc-9f86-7c00a134ac59">
+  <name>Outbox</name>
+  <synonym>
+    <key>ru</key>
+    <value>Outbox</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Nonperiodical</informationRegisterPeriodicity>
+  <writeMode>Independent</writeMode>
+  <dimensions uuid="8f57dca1-d299-5801-a413-6f8d30f92332">
+    <name>Ключ</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+  </dimensions>
+  <resources uuid="cc48fdc6-c040-5364-a26e-5ac09c88faa6">
+    <name>Содержимое</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>0</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="6f85f482-0550-5efa-a9c2-76b390874f5c">
+    <name>Отправлено</name>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </resources>
+  <resources uuid="2795e6f7-60e0-5449-845a-13f78fa1b468">
+    <name>Попытки</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <scale>0</scale>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="1d2a53a7-46d4-5159-9a84-b91fdf1a9919">
+    <name>СледующаяПопытка</name>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>DateTime</dateFractions>
+      </dateQualifiers>
+    </type>
+  </resources>
+</mdclass:InformationRegister>

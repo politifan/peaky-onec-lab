@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2fd8e465-55b0-5c35-8999-27212dca98d1">
+  <name>ПринятыеКлючи</name>
+  <synonym>
+    <key>ru</key>
+    <value>ПринятыеКлючи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Nonperiodical</informationRegisterPeriodicity>
+  <writeMode>Independent</writeMode>
+  <dimensions uuid="f3c08bf7-106a-59ae-85b5-fabc368188e4">
+    <name>Ключ</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+  </dimensions>
+  <resources uuid="3641c230-021e-5f08-a23d-42aa6dd7d105">
+    <name>Содержимое</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>0</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="93804859-799f-5817-abc9-c0a1449b7c7b">
+    <name>Результат</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>0</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+</mdclass:InformationRegister>

@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"profit\":2,\"revenue\":10,\"warehouse\":\"a\"},{\"profit\":-1,\"revenue\":-10,\"warehouse\":\"a\"}]",
+    "output": "[{\"margin\":null,\"profit\":1,\"revenue\":0,\"warehouse\":\"a\"}]"
+  },
+  {
+    "input": "[]",
+    "output": "[]"
+  }
+]

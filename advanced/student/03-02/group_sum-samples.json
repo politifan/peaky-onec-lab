@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"amount\":100,\"warehouse\":\"s\"},{\"amount\":-100,\"warehouse\":\"s\"},{\"amount\":5,\"warehouse\":\"n\"}]",
+    "output": "{\"n\":5,\"s\":0}"
+  },
+  {
+    "input": "[]",
+    "output": "{}"
+  }
+]

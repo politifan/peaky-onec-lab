@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75768a2b-399f-50d0-9967-3419a5108c38">
+  <name>Заказ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказ</value>
+  </synonym>
+  <producedTypes>
+    <objectType typeId="4f57f9b0-e265-5536-8f56-bbefa6dfb24d" valueTypeId="b13aa013-0eb8-5567-88ee-2a862e3d4659" />
+    <refType typeId="68c9219e-ec80-59bc-baa6-39e10f49e713" valueTypeId="cd287e6a-6c7b-5afc-863d-381a025d4904" />
+    <selectionType typeId="d51deff3-7244-5444-b83e-92196c717ea9" valueTypeId="28318a29-a6d2-5893-ab53-794f23780f09" />
+    <listType typeId="693e6f8d-5e47-5aad-a5d9-6ad3254d7f44" valueTypeId="01ab4b67-e235-527c-8216-8738841fe033" />
+    <managerType typeId="b2dde321-acbd-5adc-858f-219990b1ac3a" valueTypeId="05b27322-00a4-5ac8-bfba-7287b914901b" />
+  </producedTypes>
+  <useStandardCommands>true</useStandardCommands>
+  <numberLength>9</numberLength>
+  <numberType>String</numberType>
+  <autonumbering>true</autonumbering>
+  <posting>Deny</posting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="eecdf062-c2ec-5191-be40-2a1c1e7c756c">
+    <name>Склад</name>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+  </attributes>
+  <attributes uuid="24592396-f095-5991-bcb4-ca686406a560">
+    <name>Ревизия</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>0</scale>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="d8fd3ed5-8897-51e1-879b-115af0eb6c22">
+    <name>Ключ</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <tabularSections uuid="f5d239e8-8f71-5a1b-bd1f-ef6dd6d7893d">
+    <name>Товары</name>
+    <attributes uuid="d67a3f7d-16ad-5e29-99b8-8a96f5489561">
+      <name>Товар</name>
+      <type>
+        <types>CatalogRef.Товары</types>
+      </type>
+    </attributes>
+    <attributes uuid="0ef31848-0772-56b3-95e4-400bf9777657">
+      <name>Количество</name>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+    </attributes>
+    <attributes uuid="6acdea18-2a0f-5dfe-9e76-70020309ad52">
+      <name>Цена</name>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

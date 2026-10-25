@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"projects\":{\"0\":{\"no_secrets\":true,\"reproducible\":true,\"screenshots\":true,\"tests\":true},\"1\":{\"no_secrets\":true,\"reproducible\":true,\"screenshots\":true,\"tests\":true},\"2\":{\"no_secrets\":true,\"reproducible\":true,\"screenshots\":true,\"tests\":true},\"3\":{\"no_secrets\":true,\"reproducible\":true,\"screenshots\":true,\"tests\":true}}}",
+    "output": "{\"accepted\":true,\"blocked\":[],\"count\":4}"
+  },
+  {
+    "input": "{\"projects\":{}}",
+    "output": "{\"accepted\":false,\"blocked\":[],\"count\":0}"
+  }
+]

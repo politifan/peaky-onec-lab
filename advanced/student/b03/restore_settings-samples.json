@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"fields\":[\"a\",\"b\"],\"saved\":{\"fields\":[\"old\",\"b\",\"a\"],\"period\":\"day\"},\"target_version\":2}",
+    "output": "{\"fields\":[\"b\",\"a\"],\"period\":\"day\",\"version\":2}"
+  },
+  {
+    "input": "{\"fields\":[],\"saved\":{\"fields\":[],\"period\":\"\"},\"target_version\":1}",
+    "output": "{\"fields\":[],\"period\":\"\",\"version\":1}"
+  }
+]

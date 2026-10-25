@@ -1,0 +1,49 @@
+{
+  "scenario": "c05",
+  "seed": 20261004,
+  "products": [
+    {
+      "article": "N01",
+      "name": "Лампа"
+    },
+    {
+      "article": "D11",
+      "name": "Держатель"
+    },
+    {
+      "article": "D12",
+      "name": "Держатель"
+    },
+    {
+      "article": "DEL",
+      "name": "Удаляемый",
+      "marked": true
+    }
+  ],
+  "documents": [
+    {
+      "rows": [
+        {
+          "article": "D11",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "rows": [
+        {
+          "article": "D12",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "rows": [
+        {
+          "article": "DEL",
+          "qty": 1
+        }
+      ]
+    }
+  ]
+}

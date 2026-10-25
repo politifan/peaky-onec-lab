@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"batch\":20,\"rows\":50}",
+    "output": "3"
+  },
+  {
+    "input": "{\"batch\":5,\"rows\":0}",
+    "output": "0"
+  }
+]

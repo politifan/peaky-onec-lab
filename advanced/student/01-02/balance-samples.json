@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"end\":2,\"events\":[{\"delta\":-3,\"key\":\"A\",\"t\":2}],\"include_end\":true,\"initial\":{\"A\":8,\"B\":7}}",
+    "output": "{\"A\":5,\"B\":7}"
+  },
+  {
+    "input": "{\"end\":2,\"events\":[{\"delta\":-3,\"key\":\"A\",\"t\":2}],\"include_end\":false,\"initial\":{\"A\":8}}",
+    "output": "{\"A\":8}"
+  }
+]

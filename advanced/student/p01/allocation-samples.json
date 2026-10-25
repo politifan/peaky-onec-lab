@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"need\":7,\"stocks\":[{\"available\":5,\"priority\":2,\"warehouse\":\"b\"},{\"available\":4,\"priority\":1,\"warehouse\":\"a\"}]}",
+    "output": "{\"allocation\":[{\"take\":4,\"warehouse\":\"a\"},{\"take\":3,\"warehouse\":\"b\"}],\"missing\":0}"
+  },
+  {
+    "input": "{\"need\":0,\"stocks\":[]}",
+    "output": "{\"allocation\":[],\"missing\":0}"
+  }
+]

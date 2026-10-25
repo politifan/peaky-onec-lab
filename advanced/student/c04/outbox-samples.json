@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"jobs\":[{\"attempts\":2,\"key\":\"a\",\"next_at\":5,\"sent\":false},{\"attempts\":0,\"key\":\"b\",\"next_at\":0,\"sent\":true}],\"limit\":3,\"now\":5}",
+    "output": "[\"a\"]"
+  },
+  {
+    "input": "{\"jobs\":[],\"limit\":0,\"now\":0}",
+    "output": "[]"
+  }
+]

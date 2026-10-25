@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b2014c2e-d28c-554a-a8a6-890bc0bce0d6">
+  <name>ПММаякПродвинутый</name>
+  <synonym>
+    <key>ru</key>
+    <value>ПММаякПродвинутый</value>
+  </synonym>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="e6e0f4f5-2fc0-580d-ae89-4f8dbbb6190c" />
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="6189d643-d35f-5442-b046-2baa440576c5" />
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="fb2db6c1-72fd-5f9f-8070-5e08e6c5928d" />
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="440ad004-2b6b-5593-aa4d-00030d5e783c" />
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="592ffbb6-7297-5145-9da3-84c6f7060a51" />
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="a73e6dd7-ad0c-5aa8-8520-0f23f1fea318" />
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <vendor>Peaky Minds</vendor>
+  <version>2.0.0</version>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <compatibilityMode>8.3.24</compatibilityMode>
+  <languages uuid="6d214eca-b217-5bd7-9d21-6a0ff8df5798">
+    <name>Русский</name>
+    <languageCode>ru</languageCode>
+  </languages>
+  <catalogs>Catalog.Товары</catalogs>
+  <catalogs>Catalog.Склады</catalogs>
+  <documents>Document.Заказ</documents>
+  <documents>Document.Поступление</documents>
+  <documents>Document.Отгрузка</documents>
+  <accumulationRegisters>AccumulationRegister.ОстаткиТоваров</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.Продажи</accumulationRegisters>
+  <informationRegisters>InformationRegister.Цены</informationRegisters>
+  <informationRegisters>InformationRegister.Outbox</informationRegisters>
+  <informationRegisters>InformationRegister.ПринятыеКлючи</informationRegisters>
+  <commonModules>CommonModule.PMЗапросы</commonModules>
+  <commonModules>CommonModule.PMОбмен</commonModules>
+</mdclass:Configuration>

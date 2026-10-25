@@ -1,0 +1,25 @@
+{
+  "scenario": "b03",
+  "seed": 20261004,
+  "products": [
+    {
+      "article": "L01",
+      "name": "L01"
+    },
+    {
+      "article": "L\"02",
+      "name": "L\"02"
+    },
+    {
+      "article": "L02",
+      "name": "L02"
+    }
+  ],
+  "searches": [
+    "L01",
+    "L\"02",
+    "L02",
+    "UNKNOWN",
+    ""
+  ]
+}

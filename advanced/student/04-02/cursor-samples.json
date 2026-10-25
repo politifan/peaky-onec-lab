@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"accepted\":[11,13],\"start\":10}",
+    "output": "11"
+  },
+  {
+    "input": "{\"accepted\":[],\"start\":0}",
+    "output": "0"
+  }
+]

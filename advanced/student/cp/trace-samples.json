@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"events\":[{\"effect\":1,\"key\":\"a\"},{\"effect\":0,\"key\":\"a\"}],\"required\":{\"a\":1,\"b\":2}}",
+    "output": "[\"a\",\"b\"]"
+  },
+  {
+    "input": "{\"events\":[],\"required\":{}}",
+    "output": "[]"
+  }
+]

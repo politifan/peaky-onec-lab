@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"duration_us\":10,\"operation\":\"q\",\"wait_us\":7},{\"duration_us\":2,\"operation\":\"q\",\"wait_us\":0}]",
+    "output": "{\"q\":{\"count\":2,\"duration_us\":12,\"wait_us\":7}}"
+  },
+  {
+    "input": "[]",
+    "output": "{}"
+  }
+]

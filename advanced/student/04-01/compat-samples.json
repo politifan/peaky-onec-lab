@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"base\":\"v2\",\"extensions\":[{\"base\":\"v1\",\"mode\":1,\"name\":\"a\"},{\"base\":\"v2\",\"mode\":4,\"name\":\"b\"}],\"mode\":3}",
+    "output": "[\"a\",\"b\"]"
+  },
+  {
+    "input": "{\"base\":\"v1\",\"extensions\":[],\"mode\":1}",
+    "output": "[]"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"fail_at\":1,\"initial\":{\"a\":1},\"writes\":[{\"key\":\"a\",\"value\":2},{\"key\":\"b\",\"value\":3}]}",
+    "output": "{\"committed\":false,\"state\":{\"a\":1}}"
+  },
+  {
+    "input": "{\"fail_at\":-1,\"initial\":{},\"writes\":[]}",
+    "output": "{\"committed\":true,\"state\":{}}"
+  }
+]

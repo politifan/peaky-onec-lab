@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"allowed\":{\"user\":[\"read\"]},\"attempts\":[{\"operation\":\"write\",\"role\":\"user\"},{\"operation\":\"read\",\"role\":\"unknown\"}]}",
+    "output": "[\"read\",\"write\"]"
+  },
+  {
+    "input": "{\"allowed\":{},\"attempts\":[]}",
+    "output": "[]"
+  }
+]

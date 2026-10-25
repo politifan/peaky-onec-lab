@@ -1,0 +1,117 @@
+{
+  "configuration": "PeakyMindsMayak",
+  "managed_application": true,
+  "transaction_lock_mode": "managed",
+  "catalogs": {
+    "Товары": {
+      "ВнешнийКод": "String(100)"
+    },
+    "Склады": {
+      "Приоритет": "Number(3,0)"
+    }
+  },
+  "documents": {
+    "Заказ": {
+      "Склад": "CatalogRef.Склады",
+      "Ревизия": "Number(10,0)",
+      "Ключ": "String(100)",
+      "Товары": {
+        "Товар": "CatalogRef.Товары",
+        "Количество": "Number(15,3)",
+        "Цена": "Number(15,2)"
+      }
+    },
+    "Поступление": {
+      "Склад": "CatalogRef.Склады",
+      "Товары": {
+        "Товар": "CatalogRef.Товары",
+        "Количество": "Number(15,3)"
+      }
+    },
+    "Отгрузка": {
+      "Склад": "CatalogRef.Склады",
+      "Заказ": "DocumentRef.Заказ",
+      "Товары": {
+        "Товар": "CatalogRef.Товары",
+        "Количество": "Number(15,3)"
+      }
+    }
+  },
+  "accumulation_registers": {
+    "ОстаткиТоваров": {
+      "kind": "balance",
+      "dimensions": {
+        "Товар": "CatalogRef.Товары",
+        "Склад": "CatalogRef.Склады"
+      },
+      "resources": {
+        "Количество": "Number(15,3)"
+      },
+      "recorders": [
+        "Поступление",
+        "Отгрузка"
+      ]
+    },
+    "Продажи": {
+      "kind": "turnover",
+      "dimensions": {
+        "Склад": "CatalogRef.Склады",
+        "Товар": "CatalogRef.Товары"
+      },
+      "resources": {
+        "Выручка": "Number(15,2)",
+        "Прибыль": "Number(15,2)"
+      },
+      "recorders": [
+        "Отгрузка"
+      ]
+    }
+  },
+  "information_registers": {
+    "Цены": {
+      "periodicity": "second",
+      "dimensions": {
+        "Товар": "CatalogRef.Товары"
+      },
+      "resources": {
+        "Цена": "Number(15,2)",
+        "Активна": "Boolean"
+      }
+    },
+    "Outbox": {
+      "periodicity": "nonperiodic",
+      "dimensions": {
+        "Ключ": "String(100)"
+      },
+      "resources": {
+        "Содержимое": "String(unlimited)",
+        "Отправлено": "Boolean",
+        "Попытки": "Number(6,0)",
+        "СледующаяПопытка": "DateTime"
+      }
+    },
+    "ПринятыеКлючи": {
+      "periodicity": "nonperiodic",
+      "dimensions": {
+        "Ключ": "String(100)"
+      },
+      "resources": {
+        "Содержимое": "String(unlimited)",
+        "Результат": "String(unlimited)"
+      }
+    }
+  },
+  "reports": [
+    "ПродажиПоСкладам",
+    "Задолженность"
+  ],
+  "roles": [
+    "Разработчик",
+    "КладовщикСевер",
+    "КладовщикЮг",
+    "ДиспетчерОбмена"
+  ],
+  "extensions": [
+    "ЛимитЗаказа"
+  ]
+}

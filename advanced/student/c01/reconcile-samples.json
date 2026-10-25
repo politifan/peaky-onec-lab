@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"documents\":[{\"expected\":-4,\"id\":\"a\"},{\"expected\":-2,\"id\":\"b\"}],\"movements\":[{\"delta\":-2,\"doc\":\"a\"},{\"delta\":-2,\"doc\":\"a\"}]}",
+    "output": "[\"b\"]"
+  },
+  {
+    "input": "{\"documents\":[],\"movements\":[]}",
+    "output": "[]"
+  }
+]

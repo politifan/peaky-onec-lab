@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"incoming\":[{\"key\":\"a\",\"payload\":{\"qty\":2}},{\"key\":\"b\",\"payload\":{\"qty\":1}}],\"saved\":{\"a\":{\"qty\":2}}}",
+    "output": "{\"conflicts\":[],\"created\":[\"b\"],\"repeats\":[\"a\"],\"saved\":{\"a\":{\"qty\":2},\"b\":{\"qty\":1}}}"
+  },
+  {
+    "input": "{\"incoming\":[],\"saved\":{}}",
+    "output": "{\"conflicts\":[],\"created\":[],\"repeats\":[],\"saved\":{}}"
+  }
+]

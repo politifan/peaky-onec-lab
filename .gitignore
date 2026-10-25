@@ -1,0 +1,6 @@
+*.dt
+*.cf
+*.cfe
+*.1CD
+**/build/
+**/.metadata/

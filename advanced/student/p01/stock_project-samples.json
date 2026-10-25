@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"physical\":[{\"item\":\"a\",\"qty\":5,\"warehouse\":\"s\"}],\"reserved\":[{\"item\":\"a\",\"qty\":2,\"warehouse\":\"s\"},{\"item\":\"a\",\"qty\":1,\"warehouse\":\"n\"}]}",
+    "output": "[{\"available\":-1,\"item\":\"a\",\"warehouse\":\"n\"},{\"available\":3,\"item\":\"a\",\"warehouse\":\"s\"}]"
+  },
+  {
+    "input": "{\"physical\":[],\"reserved\":[]}",
+    "output": "[]"
+  }
+]

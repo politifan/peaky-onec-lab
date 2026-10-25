@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<projectDescription>
+  <name>ПММаякПродвинутый</name>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
+    <nature>com._1c.g5.v8.dt.core.V8ConfigurationNature</nature>
+  </natures>
+</projectDescription>

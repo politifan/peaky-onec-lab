@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"contract\":true,\"effect\":true,\"old_data\":true,\"repeat\":true,\"restart\":true}",
+    "output": "{\"allow\":true,\"failed\":[]}"
+  },
+  {
+    "input": "{\"contract\":false,\"effect\":false,\"old_data\":false,\"repeat\":false,\"restart\":false}",
+    "output": "{\"allow\":false,\"failed\":[\"old_data\",\"effect\",\"repeat\",\"restart\",\"contract\"]}"
+  }
+]

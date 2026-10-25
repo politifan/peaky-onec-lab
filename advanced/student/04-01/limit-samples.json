@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"amounts\":[0,100,101,-1],\"limit\":100}",
+    "output": "[2,3]"
+  },
+  {
+    "input": "{\"amounts\":[],\"limit\":0}",
+    "output": "[]"
+  }
+]

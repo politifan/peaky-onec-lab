@@ -1,0 +1,32 @@
+{
+  "scenario": "b02",
+  "seed": 20261004,
+  "products": [
+    {
+      "article": "A",
+      "name": "A"
+    },
+    {
+      "article": "B",
+      "name": "B"
+    },
+    {
+      "article": "C",
+      "name": "C"
+    }
+  ],
+  "document_rows": [
+    {
+      "article": "A",
+      "qty": 2
+    },
+    {
+      "article": "B",
+      "qty": 3
+    },
+    {
+      "article": "C",
+      "qty": 4
+    }
+  ]
+}

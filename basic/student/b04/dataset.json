@@ -1,0 +1,38 @@
+{
+  "scenario": "b04",
+  "seed": 20261004,
+  "products": [
+    {
+      "article": "A",
+      "name": "A"
+    },
+    {
+      "article": "B",
+      "name": "B"
+    }
+  ],
+  "minimums": [
+    {
+      "article": "A",
+      "minimum": 2
+    },
+    {
+      "article": "B",
+      "minimum": 5
+    }
+  ],
+  "updates": [
+    {
+      "article": "A",
+      "minimum": 4
+    },
+    {
+      "article": "A",
+      "minimum": 0
+    },
+    {
+      "article": "A",
+      "minimum": 7
+    }
+  ]
+}

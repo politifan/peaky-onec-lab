@@ -1,0 +1,84 @@
+{
+  "status": "source_scaffold_generated_not_import_verified",
+  "audience": "student",
+  "native_1c_executed": false,
+  "edt_imported": false,
+  "edt_built": false,
+  "compatibility_mode_declared": "8.3.24",
+  "forms_roles_SKD_extensions": "not_in_scaffold_must_be_implemented_and_verified",
+  "sales_movements": "not_implemented_in_smoke_shipment",
+  "files": [
+    {
+      "file": ".project",
+      "sha256": "2a4a5c379365a82055dc5fd87c89d94f5acf99456c15937d0bfa9ceda9d7a92f"
+    },
+    {
+      "file": "src/AccumulationRegisters/ОстаткиТоваров/ОстаткиТоваров.mdo",
+      "sha256": "7b2314130cfdbd49650eeabc0fa0dcc4be9ce762f5bb27e4d4ce20bda43f7d6a"
+    },
+    {
+      "file": "src/AccumulationRegisters/Продажи/Продажи.mdo",
+      "sha256": "e0042dd9dddc251947f54b200d86efdf7c6f6f3b4b64c642e762b4b8904c171c"
+    },
+    {
+      "file": "src/Catalogs/Склады/Склады.mdo",
+      "sha256": "b621ffcfafe787da2adc03a7e5376147b45f894b0eb18d8bab7005d711eb9f81"
+    },
+    {
+      "file": "src/Catalogs/Товары/Товары.mdo",
+      "sha256": "8700ced32d4b45b4eb6c91dcefeabd0442a7440bba3402a419ae1a58a952a0e7"
+    },
+    {
+      "file": "src/CommonModules/PMЗапросы/Module.bsl",
+      "sha256": "7031c83332ca42dd28ab2f41698314af8c4b5ff1ab0f38874efc30a95c2c1f8f"
+    },
+    {
+      "file": "src/CommonModules/PMЗапросы/PMЗапросы.mdo",
+      "sha256": "654b68b60458b24c0046bad4c2787868f5377483c32fcbbbbb7d5af03f416672"
+    },
+    {
+      "file": "src/CommonModules/PMОбмен/Module.bsl",
+      "sha256": "7031c83332ca42dd28ab2f41698314af8c4b5ff1ab0f38874efc30a95c2c1f8f"
+    },
+    {
+      "file": "src/CommonModules/PMОбмен/PMОбмен.mdo",
+      "sha256": "cbb4cfc5809784e1882629455dbec7793028f9746feba0a76390e667c022c3c8"
+    },
+    {
+      "file": "src/Configuration/Configuration.mdo",
+      "sha256": "a51b67e99ebe3b80947a61645c393af7d6550f86972720e588f75fa6906d7081"
+    },
+    {
+      "file": "src/Documents/Заказ/Заказ.mdo",
+      "sha256": "305baaff4219cdc3e0e067b0eae9a1e6c2d19e1cc8ed782df32d2172dcef7274"
+    },
+    {
+      "file": "src/Documents/Отгрузка/ObjectModule.bsl",
+      "sha256": "105f5d79d48ffd34f95a01793489d0482d3f7be2f6f43d24e9a187aa5736a66c"
+    },
+    {
+      "file": "src/Documents/Отгрузка/Отгрузка.mdo",
+      "sha256": "9d787b9aa6f3c7792d160cfd7e04ba99b1e1b782624dc7cb7d47dfcc1c04931d"
+    },
+    {
+      "file": "src/Documents/Поступление/ObjectModule.bsl",
+      "sha256": "105f5d79d48ffd34f95a01793489d0482d3f7be2f6f43d24e9a187aa5736a66c"
+    },
+    {
+      "file": "src/Documents/Поступление/Поступление.mdo",
+      "sha256": "944b121e2fdf69b485f2404f0085c98640d7b1d83a6ad5bc81e6e68cfcc24dbb"
+    },
+    {
+      "file": "src/InformationRegisters/Outbox/Outbox.mdo",
+      "sha256": "cde15e967e1c6a1f3cd3207471d1d65eb28627d9a3c2a567fefa6f972458d427"
+    },
+    {
+      "file": "src/InformationRegisters/ПринятыеКлючи/ПринятыеКлючи.mdo",
+      "sha256": "21b9473b2bd004bd02cfbcb2afd7623b02e9d66d03ba7c86779d6801c04c633f"
+    },
+    {
+      "file": "src/InformationRegisters/Цены/Цены.mdo",
+      "sha256": "85889f399b1ba9ee587c979b54a7a2785453cbf4de9a8f7efee9044eac0eac78"
+    }
+  ]
+}

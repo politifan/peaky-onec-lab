@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"name\":\"backup\",\"ok\":true,\"requires\":[]},{\"name\":\"update\",\"ok\":false,\"requires\":[\"backup\"]}]",
+    "output": "{\"blocked\":\"update\",\"executed\":[\"backup\"]}"
+  },
+  {
+    "input": "[]",
+    "output": "{\"blocked\":null,\"executed\":[]}"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"orders\":[{\"id\":\"x\",\"lines\":[{\"item\":\"A\",\"qty\":4},{\"item\":\"B\",\"qty\":2}]},{\"id\":\"y\",\"lines\":[{\"item\":\"A\",\"qty\":3}]}],\"stock\":{\"A\":5,\"B\":1}}",
+    "output": "{\"accepted\":[\"y\"],\"rejected\":[\"x\"],\"stock\":{\"A\":2,\"B\":1}}"
+  },
+  {
+    "input": "{\"orders\":[],\"stock\":{}}",
+    "output": "{\"accepted\":[],\"rejected\":[],\"stock\":{}}"
+  }
+]

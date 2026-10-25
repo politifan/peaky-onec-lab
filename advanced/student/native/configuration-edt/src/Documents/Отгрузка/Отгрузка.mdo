@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83df26bd-2a0b-5764-b6bc-f705d1575acf">
+  <name>Отгрузка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отгрузка</value>
+  </synonym>
+  <producedTypes>
+    <objectType typeId="a058dee5-8924-58e2-9192-2192837df6c6" valueTypeId="b88eae35-cb55-5d86-8312-63b61c833f62" />
+    <refType typeId="7dec7417-7bba-5962-8e2f-9144556d977f" valueTypeId="c73746d6-a29a-5735-afc3-848968f9c18c" />
+    <selectionType typeId="06a7eb3d-efd5-5ac0-bcda-0861ce26dea7" valueTypeId="3f05b2b0-eb49-5707-aa33-aa8011c9cf1a" />
+    <listType typeId="ba3d7235-00c4-5e56-b753-dbecf3c7e54b" valueTypeId="0995da40-a17f-5d01-bd4f-b5d189b3b13c" />
+    <managerType typeId="3e3bd8ea-fb12-5a62-8e3e-2b39505de074" valueTypeId="e64c0169-c841-508f-8f63-57361c431f21" />
+  </producedTypes>
+  <useStandardCommands>true</useStandardCommands>
+  <numberLength>9</numberLength>
+  <numberType>String</numberType>
+  <autonumbering>true</autonumbering>
+  <posting>Allow</posting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ОстаткиТоваров</registerRecords>
+  <registerRecords>AccumulationRegister.Продажи</registerRecords>
+  <attributes uuid="84d23f25-f1c0-5e78-b451-82434abef91e">
+    <name>Склад</name>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+  </attributes>
+  <attributes uuid="e3926393-7f7f-571e-9324-9217872a4593">
+    <name>Заказ</name>
+    <type>
+      <types>DocumentRef.Заказ</types>
+    </type>
+  </attributes>
+  <tabularSections uuid="db74cc8a-c48f-50ad-9190-24a4bae4ea15">
+    <name>Товары</name>
+    <attributes uuid="49897a7c-7f14-5de7-8c59-0b27a3963507">
+      <name>Товар</name>
+      <type>
+        <types>CatalogRef.Товары</types>
+      </type>
+    </attributes>
+    <attributes uuid="fde4cd7c-4827-5603-86f1-64ca1c3d603c">
+      <name>Количество</name>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

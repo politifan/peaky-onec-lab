@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a216dc71-621f-5600-abc3-13ea18375e73">
+  <name>Цены</name>
+  <synonym>
+    <key>ru</key>
+    <value>Цены</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>Independent</writeMode>
+  <dimensions uuid="731e8a96-2ba2-5181-9884-edc1a0d02c5b">
+    <name>Товар</name>
+    <type>
+      <types>CatalogRef.Товары</types>
+    </type>
+  </dimensions>
+  <resources uuid="bf795070-a557-5161-994e-c4d45c46a6cf">
+    <name>Цена</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="46763b60-3ba5-5591-bbd4-aad56a3dc5f8">
+    <name>Активна</name>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </resources>
+</mdclass:InformationRegister>

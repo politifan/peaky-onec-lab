@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"events\":[{\"committed\":true,\"last_id\":10},{\"committed\":false,\"last_id\":20}],\"initial\":0}",
+    "output": "10"
+  },
+  {
+    "input": "{\"events\":[],\"initial\":5}",
+    "output": "5"
+  }
+]

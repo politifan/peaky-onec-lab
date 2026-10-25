@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"allowed\":[\"s\"],\"shown\":[{\"warehouse\":\"s\"},{\"warehouse\":\"n\"}]}",
+    "output": "[\"n\"]"
+  },
+  {
+    "input": "{\"allowed\":[],\"shown\":[]}",
+    "output": "[]"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"backup\":0,\"failure\":15,\"probe\":35,\"rpo\":15,\"rto\":20}",
+    "output": "{\"accept\":true,\"loss_window\":15,\"restore_time\":20}"
+  },
+  {
+    "input": "{\"backup\":5,\"failure\":20,\"probe\":50,\"rpo\":14,\"rto\":40}",
+    "output": "{\"accept\":false,\"loss_window\":15,\"restore_time\":30}"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"requests\":[{\"key\":\"a\",\"qty\":4},{\"key\":\"a\",\"qty\":4},{\"key\":\"b\",\"qty\":2}],\"stock\":5}",
+    "output": "{\"results\":[\"created\",\"repeat\",\"insufficient\"],\"stock\":1}"
+  },
+  {
+    "input": "{\"requests\":[],\"stock\":0}",
+    "output": "{\"results\":[],\"stock\":0}"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "configuration": {
+    "name": "ПММастерская",
+    "default_run_mode": "ManagedApplication"
+  },
+  "catalogs": {
+    "Товары": {
+      "standard_name_length": 100,
+      "Артикул": "String(20)",
+      "Единица": "String(10)"
+    }
+  },
+  "documents": {
+    "Поступление": {
+      "posting": true,
+      "Товары": {
+        "Товар": "CatalogRef.Товары",
+        "Количество": "Number(10,3),nonnegative"
+      }
+    }
+  },
+  "accumulation_registers": {
+    "ОстаткиТоваров": {
+      "kind": "balance",
+      "dimensions": {
+        "Товар": "CatalogRef.Товары"
+      },
+      "resources": {
+        "Количество": "Number(12,3)"
+      },
+      "recorders": [
+        "Поступление"
+      ]
+    }
+  },
+  "information_registers": {
+    "НастройкиТоваров": {
+      "periodicity": "Nonperiodical",
+      "write_mode": "Independent",
+      "dimensions": {
+        "Товар": "CatalogRef.Товары"
+      },
+      "resources": {
+        "МинимальныйОстаток": "Number(10,3)"
+      }
+    }
+  }
+}

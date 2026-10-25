@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"day\":40,\"invoices\":[{\"amount\":10,\"due\":40,\"paid\":2},{\"amount\":5,\"due\":10,\"paid\":1},{\"amount\":7,\"due\":9,\"paid\":0}]}",
+    "output": "{\"current\":8,\"late_1_30\":4,\"late_31_plus\":7}"
+  },
+  {
+    "input": "{\"day\":0,\"invoices\":[]}",
+    "output": "{\"current\":0,\"late_1_30\":0,\"late_31_plus\":0}"
+  }
+]

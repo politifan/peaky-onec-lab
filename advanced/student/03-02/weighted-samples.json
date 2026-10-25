@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"profit\":50,\"revenue\":100},{\"profit\":500,\"revenue\":10000}]",
+    "output": "{\"denominator\":10100,\"numerator\":550}"
+  },
+  {
+    "input": "[]",
+    "output": "null"
+  }
+]

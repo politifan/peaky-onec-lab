@@ -1,0 +1,35 @@
+{
+  "scenario": "c04",
+  "seed": 20261004,
+  "products": [
+    {
+      "article": "A",
+      "name": "Лампа"
+    },
+    {
+      "article": "B",
+      "name": "Держатель"
+    }
+  ],
+  "documents": [
+    {
+      "label": "A",
+      "rows": [
+        {
+          "article": "A",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "rows": [
+        {
+          "article": "B",
+          "qty": 2
+        }
+      ]
+    }
+  ],
+  "new_qty_A": 6
+}

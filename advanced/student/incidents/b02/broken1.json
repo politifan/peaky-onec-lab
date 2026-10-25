@@ -1,0 +1,21 @@
+{
+  "saved": {
+    "a": {
+      "qty": 2
+    }
+  },
+  "incoming": [
+    {
+      "key": "a",
+      "payload": {
+        "qty": 2
+      }
+    },
+    {
+      "key": "b",
+      "payload": {
+        "qty": 1
+      }
+    }
+  ]
+}

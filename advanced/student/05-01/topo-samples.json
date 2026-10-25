@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"Catalog\":[],\"Document\":[\"Catalog\"],\"Form\":[\"Document\"]}",
+    "output": "[\"Catalog\",\"Document\",\"Form\"]"
+  },
+  {
+    "input": "{}",
+    "output": "[]"
+  }
+]

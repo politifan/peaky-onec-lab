@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"action\":\"acquire\",\"resource\":\"x\",\"session\":\"a\"},{\"action\":\"acquire\",\"resource\":\"x\",\"session\":\"b\"}]",
+    "output": "{\"owners\":{\"x\":\"a\"},\"wait\":[\"b\"]}"
+  },
+  {
+    "input": "[]",
+    "output": "{\"owners\":{},\"wait\":[]}"
+  }
+]

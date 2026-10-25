@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:AccumulationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="495c3f9f-8634-5a1e-98ee-ccec51031ad4">
+  <name>Продажи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dimensions uuid="5030b3e2-1f7f-5cce-8b10-f8510d6b47b3">
+    <name>Склад</name>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+  </dimensions>
+  <dimensions uuid="b7db60fb-7784-5345-9549-7668b81941b0">
+    <name>Товар</name>
+    <type>
+      <types>CatalogRef.Товары</types>
+    </type>
+  </dimensions>
+  <resources uuid="8d8dd3ba-2546-57fe-80c6-cf3f8b0c010c">
+    <name>Выручка</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="1358b396-4b91-53fc-b78d-649f2b1c7d86">
+    <name>Прибыль</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+  </resources>
+</mdclass:AccumulationRegister>

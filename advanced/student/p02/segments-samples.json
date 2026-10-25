@@ -1,0 +1,10 @@
+[
+  {
+    "input": "[{\"orders\":2,\"revenue\":9,\"segment\":\"b\"},{\"orders\":1,\"revenue\":6,\"segment\":\"b\"}]",
+    "output": "[{\"average\":[15,3],\"orders\":3,\"revenue\":15,\"segment\":\"b\"}]"
+  },
+  {
+    "input": "[]",
+    "output": "[]"
+  }
+]

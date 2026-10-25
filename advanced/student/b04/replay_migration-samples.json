@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"batches\":[[1,2],[1,2]],\"rows\":[{\"code\":\"\",\"id\":1},{\"code\":\"legacy\",\"id\":2}]}",
+    "output": "[{\"code\":\"T-1\",\"id\":1},{\"code\":\"legacy\",\"id\":2}]"
+  },
+  {
+    "input": "{\"batches\":[[5]],\"rows\":[]}",
+    "output": "[]"
+  }
+]

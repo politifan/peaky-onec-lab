@@ -1,0 +1,564 @@
+{
+  "tasks": [
+    {
+      "key": "01-01-native-1",
+      "lesson": "01-01",
+      "title": "Запрос потребности",
+      "contract": "В одном Заказе A:2, A:3, B:1. Запросом с параметром ссылки получите A:5, B:1. Другой заказ A:9 не входит. Для пустого заказа результат пустой.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "01-01-native-2",
+      "lesson": "01-01",
+      "title": "Историческая цена",
+      "contract": "Для A задайте цены 100 на 01.01 и 120 на 02.01. Заказ A:2,A:3,B:1 на 02.01: три исходных строки, стоимость A:600; B остаётся без цены. Цена 150 на 03.01 не меняет прошлый результат.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "01-02-native-1",
+      "lesson": "01-02",
+      "title": "Перепроведение",
+      "contract": "Поступление A:10,B:7; повторное проведение не удваивает остатки. Измените A на 12: итог A:12,B:7. Удаление проведения убирает только движения этого документа.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "01-02-native-2",
+      "lesson": "01-02",
+      "title": "Граница периода",
+      "contract": "Разместите расход A:2 на 01.02 00:00 и A:3 на 02.02 00:00. Полуоткрытый период [01.02,02.02) содержит 2. Сверьте точный момент и соседние секунды.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c01-native-1",
+      "lesson": "c01",
+      "title": "Сверка регистратора",
+      "contract": "При перепроведении K-17 устраните двойной расход A, сохраните B:7. Сравните движения именно K-17 и полный остаток до/после.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c01-native-2",
+      "lesson": "c01",
+      "title": "Период и цена",
+      "contract": "Проверьте историческую цену и расход на точной границе периода отдельными запросами; приложите параметры и результат, исключающий будущую цену.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "02-01-native-1",
+      "lesson": "02-01",
+      "title": "Атомарный расход",
+      "contract": "При A:10,B:1 отгрузите A:3,B:2. Проведение отклонено, остатки A:10,B:1; нет частичных движений. Для A:3,B:1 приняты оба расхода.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "02-01-native-2",
+      "lesson": "02-01",
+      "title": "Повтор документа",
+      "contract": "Два одинаковых вызова проведения одного регистратора дают один эффект. Два разных регистратора дают два эффекта. Отдельно проверьте отказ при перепроведении и сохранение прежнего принятого состояния.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "02-02-native-1",
+      "lesson": "02-02",
+      "title": "Конкурентный резерв",
+      "contract": "На лицензированной среде с двумя сеансами запустите резерв A:7 из A:10, синхронизируя начало перед чтением. Один успех, один отказ, остаток 3. Последовательный запуск не доказывает конкурентность.",
+      "runtime": "1C BSL, not Python",
+      "environment": "two_sessions_or_full_platform",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "02-02-native-2",
+      "lesson": "02-02",
+      "title": "Идемпотентный ключ",
+      "contract": "Запишите заказ с ключом K и суммой 100; повтор того же тела возвращает прежнюю ссылку. K с суммой 101 конфликтует. Закройте сеанс, откройте новый: K:100 всё ещё не создаёт новый заказ.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c02-native-1",
+      "lesson": "c02",
+      "title": "Отказ набора",
+      "contract": "Повторите частичный дефицит A/B и сравните все регистры до/после. Нет ни списания A, ни принятого ключа при отказе B.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c02-native-2",
+      "lesson": "c02",
+      "title": "Два сеанса",
+      "contract": "В разрешённой среде повторите гонку одного склада и товара. Сохраните идентификаторы сеансов, момент чтения и записи, победителя и итог без минуса.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "03-01-native-1",
+      "lesson": "03-01",
+      "title": "Контекст формы",
+      "contract": "Измените количество и цену в управляемой форме, вызовите серверный расчёт без контекста с явными параметрами. Итог обновляется один раз. Запишите число серверных вызовов для 10 строк.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "03-01-native-2",
+      "lesson": "03-01",
+      "title": "Ревизия записи",
+      "contract": "Откройте заказ ревизии 3, сохраните изменение до ревизии 4. Повтор сохранения с ожидаемой ревизией 3 отклонён, новые данные ревизии 4 сохранены; повторное открытие показывает их.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "03-02-native-1",
+      "lesson": "03-02",
+      "title": "Ресурс СКД",
+      "contract": "Две продажи: выручка 100/900, прибыль 50/90. В СКД итоговая маржа 14%, а не 30%. Нулевая выручка даёт неопределённый процент; возврат сохраняется в сумме.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "03-02-native-2",
+      "lesson": "03-02",
+      "title": "Ограничение источника",
+      "contract": "Пользователь Север видит только Север. Проверьте исходный набор, расшифровку, группировку и скрытые поля; Юг не попадает ни в один путь. В учебной редакции это проверка роли, а не защищённой аутентификации.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c03-native-1",
+      "lesson": "c03",
+      "title": "Страница списка",
+      "contract": "Создайте два одинаковых имени с разными ссылками. Страница строго после пары имя,id не повторяет и не пропускает запись.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c03-native-2",
+      "lesson": "c03",
+      "title": "Права СКД",
+      "contract": "В реальной форме отчёта проверьте источник, расшифровку и суммарные значения Север/Юг под соответствующими ролями.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "04-01-native-1",
+      "lesson": "04-01",
+      "title": "Серверный лимит расширения",
+      "contract": "Расширение разрешает сумму 100 при лимите 100, отклоняет 101 и отрицательную сумму. Одинаковая проверка работает через форму и общий серверный метод.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "04-01-native-2",
+      "lesson": "04-01",
+      "title": "Применимость",
+      "contract": "Зафиксируйте базовый commit и версию совместимости. Измените заимствованный метод в отдельной копии: сохраните результат проверки применимости и затем выполните три бизнес-пробы; зелёный список сам по себе не доказательство.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "04-02-native-1",
+      "lesson": "04-02",
+      "title": "Реальный HTTP",
+      "contract": "Из BSL отправьте JSON заказа в поставленный FastAPI приёмник: новое тело 201, повтор 200, конфликт тела 409. Сохраните реальные HTTP ответы; после перезапуска приёмника повтор 200.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "04-02-native-2",
+      "lesson": "04-02",
+      "title": "Outbox после фиксации",
+      "contract": "Зафиксируйте заказ и запись Outbox, затем отключите приёмник. Заказ остаётся принят, попытка растёт; после восстановления посылается тот же ключ. 409 переводится в разбор конфликта, а не бесконечный повтор.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c04-native-1",
+      "lesson": "c04",
+      "title": "Расписание Outbox",
+      "contract": "Для sent=false, attempts<limit и next_at<=now выберите только готовые записи. Граница next_at=now включается; превышенный лимит исключается.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c04-native-2",
+      "lesson": "c04",
+      "title": "Неизвестная роль",
+      "contract": "В серверном обработчике неизвестная роль не получает право на заказ. Отказ не создаёт движения, принятого ключа и Outbox.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "05-01-native-1",
+      "lesson": "05-01",
+      "title": "Чистая сборка EDT",
+      "contract": "Импортируйте экспорт Конфигуратора в EDT, зафиксируйте commit. В отдельной пустой базе соберите из того же commit; проверка конфигурации без ошибок, запрос и проведение выполняются.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "05-01-native-2",
+      "lesson": "05-01",
+      "title": "Сломанная ссылка",
+      "contract": "Удалите реквизит, используемый модулем, в отдельной ветке. Получите настоящий диагностический результат EDT/платформы, исправьте ссылку, повторите сборку и бизнес-пробы; чистый Git недостаточен.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "05-02-native-1",
+      "lesson": "05-02",
+      "title": "Замер запроса",
+      "contract": "На одинаковых данных сравните два запроса по времени, числу строк и суммам. Сохраните пять измерений, вычислите p95 по ближайшему рангу. Изменение результата запрещает принимать ускорение.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "05-02-native-2",
+      "lesson": "05-02",
+      "title": "Технологический журнал",
+      "contract": "В своей базе включите доступные события журнала на ограниченный интервал. Найдите медленный участок по времени и контексту, приложите исходный фрагмент и повтор после изменения. План клиент-серверной СУБД требует соответствующей среды.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c05-native-1",
+      "lesson": "c05",
+      "title": "Сборка повреждённой ветки",
+      "contract": "Внесите отсутствующую ссылку метаданных, получите реальную ошибку сборки, исправьте и повторите запрос/проведение в чистой базе.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c05-native-2",
+      "lesson": "c05",
+      "title": "Замер с сохранностью",
+      "contract": "Ускорьте чтение на одном датасете. Число строк, ключи и суммы равны прежним; отдельный тест намеренно неверного быстрого запроса должен провалиться.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "06-01-native-1",
+      "lesson": "06-01",
+      "title": "Повтор миграции",
+      "contract": "A без кода, B с legacy-кодом. Пакет присваивает A:T-1, сохраняет B. Повтор не меняет ни один код. Искусственный отказ перед фиксацией отменяет весь пакет.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "06-01-native-2",
+      "lesson": "06-01",
+      "title": "Позиция пакета",
+      "contract": "Обработайте id 1–10 и зафиксируйте позицию 10. Откажитесь на id 15 в пакете 11–20: позиция остаётся 10. После исправления повторитесь с 11, проверьте отсутствие пропусков и дублей.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "06-02-native-1",
+      "lesson": "06-02",
+      "title": "Настоящее восстановление",
+      "contract": "Сделайте .dt собственной базы, измените данные, восстановите копию в отдельную пустую базу. Запустите запрос, проведение и повтор обмена. Зафиксируйте потерянный интервал и время до последней успешной бизнес-пробы.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "06-02-native-2",
+      "lesson": "06-02",
+      "title": "Последний результат",
+      "contract": "Для обязательной пробы сохраните success, затем failure. Отчёт готовности должен учитывать failure. После исправления новый реальный success меняет статус; отсутствие пробы не считается успехом.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c06-native-1",
+      "lesson": "c06",
+      "title": "Отказ миграции",
+      "contract": "Прервите пакет до фиксации и восстановите позицию; старые ключи/количества неизменны, новый запуск завершает каждый id один раз.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "c06-native-2",
+      "lesson": "c06",
+      "title": "Копия и бизнес-пробы",
+      "contract": "Восстановите отдельную базу из собственной копии; подтвердите старые заказы, актуальные остатки и повтор принятого ключа после нового сеанса.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b01-native-1",
+      "lesson": "b01",
+      "title": "Диагноз цены",
+      "contract": "В собственной копии замените срез соединением со всеми ценами. Докажите увеличение числа строк, исправьте дату/зерно и сохраните строку без цены.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b01-native-2",
+      "lesson": "b01",
+      "title": "Регрессия остатка",
+      "contract": "После исправления запроса перепроведите расход: сумма аналитики верна, остаток и прежний B:7 не изменены посторонним исправлением.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b02-native-1",
+      "lesson": "b02",
+      "title": "Перепроведение расхода",
+      "contract": "В собственной копии уберите замену прежних движений. Повторите документ, наблюдайте двойной эффект; восстановите один эффект и контроль другого регистратора.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b02-native-2",
+      "lesson": "b02",
+      "title": "Отказ и гонка",
+      "contract": "Проверьте частичный дефицит в одном сеансе, затем конкурентный случай в разрешённой среде. Сохраните отдельные доказательства обоих свойств.",
+      "runtime": "1C BSL, not Python",
+      "environment": "two_sessions_or_full_platform",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b03-native-1",
+      "lesson": "b03",
+      "title": "Утечка источника",
+      "contract": "В отдельной копии ограничьте только видимое поле. Докажите наличие Юга в расшифровке/скрытом источнике; исправьте серверное ограничение источника.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b03-native-2",
+      "lesson": "b03",
+      "title": "Ресурс и возврат",
+      "contract": "После исправления прав проверьте итоговую маржу на 100/900, возврат и нулевую базу; фильтр не должен маскировать арифметическую ошибку.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b04-native-1",
+      "lesson": "b04",
+      "title": "Миграция после сбоя",
+      "contract": "В копии продвиньте позицию до фиксации. Вызовите отказ на середине пакета, найдите пропущенные id, исправьте атомарность состояния/позиции.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "b04-native-2",
+      "lesson": "b04",
+      "title": "Восстановление и повтор",
+      "contract": "Восстановите последнюю согласованную копию в другую базу, выполните миграцию и повтор обмена; принятые ключи и старые коды сохранены.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "cb-native-1",
+      "lesson": "cb",
+      "title": "Независимая сохранность",
+      "contract": "После ремонта четырёх инцидентов прочитайте старые объекты/регистры заново: старые данные, эффект, повтор, рестарт и контракт подтверждены отдельными пробами.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "cb-native-2",
+      "lesson": "cb",
+      "title": "Неверное исправление",
+      "contract": "Внесите в копию исправление, которое проходит исходный пример, но портит B:7 либо историческую цену. Контроль обязан обнаружить регрессию.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p01-native-1",
+      "lesson": "p01",
+      "title": "Склад и резерв",
+      "contract": "Реализуйте реальный EDT проект распределения по складам, проведите приёмку, резерв и отгрузку с дефицитом/повтором; два сеанса проверяются отдельно при доступной лицензии.",
+      "runtime": "1C BSL, not Python",
+      "environment": "two_sessions_or_full_platform",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p01-native-2",
+      "lesson": "p01",
+      "title": "Чистая демонстрация",
+      "contract": "Из чистого commit соберите в пустой базе, загрузите демонстрационные данные и повторите сценарий; отчёт содержит контрольные остатки и движения регистратора.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p02-native-1",
+      "lesson": "p02",
+      "title": "Аналитика СКД",
+      "contract": "Создайте реальную схему СКД продаж и задолженности с собственной моделью сроков. Проверьте сумму, маржу, возвраты, нулевую базу и ограничение источника ролями.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p02-native-2",
+      "lesson": "p02",
+      "title": "Пользовательская демонстрация",
+      "contract": "Откройте управляемую форму, поменяйте отбор/группировку, проверьте расшифровку. На учебной версии вместо запрещённого сохранения табличного документа приложите разрешённые снимки UI.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p03-native-1",
+      "lesson": "p03",
+      "title": "Шлюз 1С/FastAPI",
+      "contract": "Заказ и Outbox фиксируются локально; реальные запросы из BSL создают, повторяют и конфликтуют. Отключение приёмника не теряет локальный заказ.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p03-native-2",
+      "lesson": "p03",
+      "title": "Два рестарта",
+      "contract": "Перезапустите приёмник и затем сеанс 1С. Тот же ключ не даёт второй эффект, незавершённая очередь продолжается; сверяйте обе БД.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p04-native-1",
+      "lesson": "p04",
+      "title": "Обновление из commit",
+      "contract": "Соберите свою конфигурацию EDT из фиксированного commit, выполните пакетную миграцию с контролируемым отказом и возобновлением. Сохраните настоящее заключение платформы.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "p04-native-2",
+      "lesson": "p04",
+      "title": "Восстановление",
+      "contract": "В другой базе восстановите копию и повторите бизнес-пробы до объявления готовности. RPO/RTO вычислите по фактическим временам копии, отказа и последней успешной пробы.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "cp-native-1",
+      "lesson": "cp",
+      "title": "Четыре воспроизведения",
+      "contract": "Откройте каждый из четырёх независимых репозиториев в чистой рабочей копии, соберите и выполните его разные обязательные сценарии. Один запуск склада не покрывает аналитику/шлюз/восстановление.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    },
+    {
+      "key": "cp-native-2",
+      "lesson": "cp",
+      "title": "Последние доказательства",
+      "contract": "Сопоставьте commit, версии, фактические результаты и обязательные критерии каждого проекта. Новый failed блокирует принятие даже при старом passed.",
+      "runtime": "1C BSL, not Python",
+      "environment": "single_session_platform_with_task_metadata",
+      "status": "not_run",
+      "evidence": null
+    }
+  ]
+}

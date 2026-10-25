@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:AccumulationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="00c29dd7-992c-5709-84e9-5aab1751cb53">
+  <name>ОстаткиТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>ОстаткиТоваров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Balance</registerType>
+  <dimensions uuid="bf626df9-2272-54a8-a464-eea6c6c34e0f">
+    <name>Товар</name>
+    <type>
+      <types>CatalogRef.Товары</types>
+    </type>
+  </dimensions>
+  <dimensions uuid="da3a561f-caa6-5bd8-93b4-b6db4f2d636c">
+    <name>Склад</name>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+  </dimensions>
+  <resources uuid="10abc0e2-a868-5370-b077-036bb3fd8bba">
+    <name>Количество</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+  </resources>
+</mdclass:AccumulationRegister>

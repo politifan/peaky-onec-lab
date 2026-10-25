@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="484a322a-a8ca-5706-b2c4-6dddcbccd2d5">
+  <name>Поступление</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поступление</value>
+  </synonym>
+  <producedTypes>
+    <objectType typeId="442559ff-e7f9-5df6-b5f6-7643f792e274" valueTypeId="dcd9467e-8805-511d-bd7a-e2101b8a46fa" />
+    <refType typeId="4e1840a5-1da4-5917-ba9f-39ccd39b30d7" valueTypeId="d20c4052-7381-5342-b579-83dad3532544" />
+    <selectionType typeId="0ea945c2-f7ab-53bd-b329-e9e38e5f7178" valueTypeId="28e4a24f-ab99-5dc4-8650-0ea83b211683" />
+    <listType typeId="c30d8d5c-6ce7-5751-9536-e9d5888cf086" valueTypeId="14eaa7f0-bf35-503f-a84f-ce9d132f527a" />
+    <managerType typeId="dc59b349-61f1-5819-8eb4-cab553a941e6" valueTypeId="c612ba7e-32ed-54eb-aebb-f6c5f281b370" />
+  </producedTypes>
+  <useStandardCommands>true</useStandardCommands>
+  <numberLength>9</numberLength>
+  <numberType>String</numberType>
+  <autonumbering>true</autonumbering>
+  <posting>Allow</posting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ОстаткиТоваров</registerRecords>
+  <attributes uuid="e8930df7-b3aa-5ef4-b222-dad12551659e">
+    <name>Склад</name>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+  </attributes>
+  <tabularSections uuid="cf8e8268-8d8b-5a09-a058-364180aa4acc">
+    <name>Товары</name>
+    <attributes uuid="2777362a-5e89-548c-92e1-888f65dcd522">
+      <name>Товар</name>
+      <type>
+        <types>CatalogRef.Товары</types>
+      </type>
+    </attributes>
+    <attributes uuid="1f9539a9-b586-57db-b79c-e86144cbcbe8">
+      <name>Количество</name>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

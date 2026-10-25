@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"item\":\"A\",\"key\":\"a\",\"qty\":2,\"schema_version\":1,\"warehouse\":\"s\"}",
+    "output": "true"
+  },
+  {
+    "input": "{\"item\":\"A\",\"key\":\"a\",\"qty\":true,\"schema_version\":1,\"warehouse\":\"s\"}",
+    "output": "false"
+  }
+]

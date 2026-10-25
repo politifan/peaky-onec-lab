@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"actual\":2,\"expected\":1,\"new\":\"y\",\"old\":\"x\"}",
+    "output": "{\"revision\":2,\"status\":\"conflict\",\"value\":\"x\"}"
+  },
+  {
+    "input": "{\"actual\":0,\"expected\":0,\"new\":\"a\",\"old\":\"\"}",
+    "output": "{\"revision\":1,\"status\":\"updated\",\"value\":\"a\"}"
+  }
+]

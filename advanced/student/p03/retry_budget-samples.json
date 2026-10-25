@@ -1,0 +1,10 @@
+[
+  {
+    "input": "{\"attempts\":[{\"cost\":2,\"key\":\"a\",\"ok\":false},{\"cost\":2,\"key\":\"b\",\"ok\":false},{\"cost\":1,\"key\":\"c\",\"ok\":true}],\"budget\":3}",
+    "output": "{\"attempted\":[\"a\",\"b\"],\"used\":4}"
+  },
+  {
+    "input": "{\"attempts\":[],\"budget\":1}",
+    "output": "{\"attempted\":[],\"used\":0}"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "scenario": "b01",
+  "seed": 20261004,
+  "products": [
+    {
+      "article": "B01",
+      "name": "Лампа"
+    },
+    {
+      "article": "B02",
+      "name": "Держатель"
+    }
+  ],
+  "calculations": [
+    {
+      "qty": 2,
+      "price": 150
+    },
+    {
+      "qty": 3,
+      "price": 20
+    }
+  ]
+}
